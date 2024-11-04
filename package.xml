@@ -1,4 +1,4 @@
-<package format="2">
+<package format="3">
     <name>marine_radar_control_msgs</name>
     <version>0.0.1</version>
     <description>
@@ -7,19 +7,15 @@
     <maintainer email="roland@ccom.unh.edu">Roland Arsenault</maintainer>
     <license>BSD</license>
     
-    <buildtool_depend>catkin</buildtool_depend>
+    <buildtool_depend>ament_cmake</buildtool_depend>
+    <buildtool_depend>rosidl_default_generators</buildtool_depend>
     
-    <build_depend>message_generation</build_depend>
-    <build_depend>std_msgs</build_depend>
+    <depend>std_msgs</depend>
 
-    <exec_depend>message_runtime</exec_depend>
-    <exec_depend>std_msgs</exec_depend>
-
-    <depend>rosbag_migration_rule</depend>
+    <exec_depend>rosidl_default_runtime</exec_depend>
+    <member_of_group>rosidl_interface_packages</member_of_group>
     <export>
-        <rosbag_migration_rule rule_file="bmr/RadarControlItem.bmr"/>
-        <rosbag_migration_rule rule_file="bmr/RadarControlSet.bmr"/>
-        <rosbag_migration_rule rule_file="bmr/RadarControlValue.bmr"/>
+        <build_type>ament_cmake</build_type>
     </export>
 
 </package>
